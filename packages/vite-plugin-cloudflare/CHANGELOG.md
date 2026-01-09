@@ -1,5 +1,24 @@
 # @cloudflare/vite-plugin
 
+## 1.20.2
+
+### Patch Changes
+
+- [#11834](https://github.com/cloudflare/workers-sdk/pull/11834) [`5c59217`](https://github.com/cloudflare/workers-sdk/commit/5c5921768f928de4526a315bb508e3ed25a2ccad) Thanks [@vicb](https://github.com/vicb)! - fix handling of Node builtin modules
+
+  The list builtin modules should not depend on the version of Node.
+  Switch to using the lists published by `@cloudflare/unenv-preset`.
+
+  This fixes an issue with trying to import i.e. `node:sqlite` with Node < 22.5.0
+  which does not implement this module.
+
+- [#11838](https://github.com/cloudflare/workers-sdk/pull/11838) [`88a9e20`](https://github.com/cloudflare/workers-sdk/commit/88a9e204004b671d5e5f545efdfd6285c80eaab6) Thanks [@jamesopstad](https://github.com/jamesopstad)! - Set `build.rolldownOptions.resolve.extensions` for compatibility with Vite 8 beta.
+
+- Updated dependencies [[`5c59217`](https://github.com/cloudflare/workers-sdk/commit/5c5921768f928de4526a315bb508e3ed25a2ccad), [`faa5753`](https://github.com/cloudflare/workers-sdk/commit/faa5753fa685117065c801e5d1fcee3486a6f0bd), [`e574ef3`](https://github.com/cloudflare/workers-sdk/commit/e574ef3e73aa00ca82e84fe308da0fed768477d9), [`5c59217`](https://github.com/cloudflare/workers-sdk/commit/5c5921768f928de4526a315bb508e3ed25a2ccad), [`fc96e5f`](https://github.com/cloudflare/workers-sdk/commit/fc96e5fe117948c57e49bf0741d55955691f1c28), [`43d5363`](https://github.com/cloudflare/workers-sdk/commit/43d5363c7b40191723e9bab9900edd70ecac5837)]:
+  - @cloudflare/unenv-preset@2.9.0
+  - miniflare@4.20260109.0
+  - wrangler@4.59.0
+
 ## 1.20.1
 
 ### Patch Changes
